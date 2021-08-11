@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Make an appointment</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Schedule your appt today!</h1>
+    <form id="appointment">
+      <div class="form-group">
+        <label for="name">What name should we put your appt under?</label>
+        <input id="name" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="description">type of apointment</label>
+        <input id="description" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="date">date of appointment</label>
+        <input id="date" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="startTime">Start Time</label>
+        <input id="startTime" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="endTime">End Time</label>
+        <input id="endTime" class="form-control" type="text">
+      </div>
+      <button type="submit" class="btn">Book now!</button>
+    </form>
+    <div id="booking">
+      <p>Congrats <span class="name"></span>. Your <span class="description"></span> appointment has been confirmed for <span class="date"></span> at <span class="startTime"></span> and ending at <span class="endTime"></span>.</p>
+      <a href="booking-successful.html">Confirm?</a>
+    </div>
+  </div>
+</body>
+</html>

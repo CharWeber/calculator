@@ -47,4 +47,24 @@ $("form#multiply").submit(function(event) {
     const result = divide(number1, number2);
     $("#divideOutput").text(result);
   });
+// calculator stuff above
+  $("form#appointment").submit(function(event){
+    event.preventDefault();
+    const name = $("#name").val();
+    const description = $("#description").val();
+    const date = $("#date").val();
+    const startTime = $("#startTime").val();
+    const endTime = $("#endTime").val();
+    
+    $(".name").text(name);
+    $(".description").text(description);
+    $(".date").text(date);
+    $(".startTime").text(startTime);
+    $(".endTime").text(endTime);
+
+    $("#booking").show();
+  });
+
+
+
 });
