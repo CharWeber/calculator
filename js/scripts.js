@@ -16,6 +16,15 @@ function divide(number1, number2) {
   return number1 / number2;
 }
 
+// cooking
+
+function convertOz(number1){
+  return number1 / 33.814
+}
+
+function convertLitres(number1){
+  return number1 * 33.814
+}
 // User interface logic
 
 $(document).ready(function() {
@@ -47,7 +56,7 @@ $("form#multiply").submit(function(event) {
     const result = divide(number1, number2);
     $("#divideOutput").text(result);
   });
-// calculator stuff above
+// calculator UI above
   $("form#appointment").submit(function(event){
     event.preventDefault();
     const name = $("#name").val();
@@ -64,7 +73,18 @@ $("form#multiply").submit(function(event) {
 
     $("#booking").show();
   });
-
-
-
+ // Appointment UI above
+  $("form#oz").submit(function(event) {
+    event.preventDefault();
+    const number1 = parseInt($("#oz1").val());
+    const result = convertOz(number1);
+    $(".ozOutput").text(result);
+  });
+  $("form#litres").submit(function(event) {
+    event.preventDefault();
+    const number1 = parseInt($("#litres1").val());
+    const result = convertLitres(number1);
+    $(".litreOutput").text(result);
+  });
+// Cooking UI above
 });
